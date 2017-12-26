@@ -96,12 +96,12 @@ yMargin;
 #X obj 869 233 t b f;
 #X obj 702 314 cnv 10 10 17 empty empty empty 20 12 0 14 -36103 -1
 0;
-#X obj 790 313 cnv 10 12 17 empty empty x 1 8 0 14 -224132 -262144
+#X obj 790 313 cnv 10 12 17 empty empty x 1 8 0 14 -252418 -262144
 0;
 #X obj 802 313 v \$0-xPos;
 #X obj 901 314 v \$0-yPos;
 #X obj 713 314 v \$0-gop;
-#X obj 888 314 cnv 10 12 17 empty empty y 1 8 0 14 -224132 -262144
+#X obj 888 314 cnv 10 12 17 empty empty y 1 8 0 14 -252418 -262144
 0;
 #X obj 209 227 bng 15 250 50 0 \$0-left empty empty 17 7 0 10 -262144
 -1 -1;
@@ -112,7 +112,7 @@ yMargin;
 #X obj 228 227 bng 15 250 50 0 \$0-down empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 57 534 r \$0-left;
-#X obj 45 556 cnv 10 12 17 empty empty x 1 8 0 14 -224132 -262144 0
+#X obj 45 556 cnv 10 12 17 empty empty x 1 8 0 14 -252418 -262144 0
 ;
 #X obj 57 556 v \$0-xPos;
 #X obj 57 659 s \$0-setXPos;
@@ -125,12 +125,12 @@ yMargin;
 #X obj 37 177 v \$0-w;
 #X obj 192 157 cnv 10 10 17 empty empty empty 20 12 0 14 -36103 -1
 0;
-#X obj 280 156 cnv 10 12 17 empty empty x 1 8 0 14 -224132 -262144
+#X obj 280 156 cnv 10 12 17 empty empty x 1 8 0 14 -252418 -262144
 0;
 #X obj 292 156 v \$0-xPos;
 #X obj 391 157 v \$0-yPos;
 #X obj 203 157 v \$0-gop;
-#X obj 378 157 cnv 10 12 17 empty empty y 1 8 0 14 -224132 -262144
+#X obj 378 157 cnv 10 12 17 empty empty y 1 8 0 14 -252418 -262144
 0;
 #X obj 37 23 loadbang;
 #X msg 37 157 200;
@@ -171,7 +171,7 @@ yMargin;
 0;
 #X obj 89 600 v \$0-incr;
 #X obj 57 578 t f b;
-#X obj 165 556 cnv 10 12 17 empty empty x 1 8 0 14 -224132 -262144
+#X obj 165 556 cnv 10 12 17 empty empty x 1 8 0 14 -252418 -262144
 0;
 #X obj 177 556 v \$0-xPos;
 #X obj 177 659 s \$0-setXPos;
@@ -181,7 +181,7 @@ yMargin;
 #X obj 177 578 t f b;
 #X obj 177 632 expr $f1+$f2;
 #X obj 177 534 r \$0-right;
-#X obj 285 556 cnv 10 12 17 empty empty y 1 8 0 14 -224132 -262144
+#X obj 285 556 cnv 10 12 17 empty empty y 1 8 0 14 -252418 -262144
 0;
 #X obj 319 600 cnv 10 10 17 empty empty empty 20 12 0 14 -201390 -1
 0;
@@ -191,7 +191,7 @@ yMargin;
 #X obj 297 556 v \$0-yPos;
 #X obj 297 659 s \$0-setYPos;
 #X obj 297 632 expr $f1-$f2;
-#X obj 395 556 cnv 10 12 17 empty empty y 1 8 0 14 -224132 -262144
+#X obj 395 556 cnv 10 12 17 empty empty y 1 8 0 14 -252418 -262144
 0;
 #X obj 429 600 cnv 10 10 17 empty empty empty 20 12 0 14 -201390 -1
 0;
@@ -263,7 +263,7 @@ yMargin;
 #X obj 330 400 del 10;
 #X msg 330 422 map 0 \, map 1;
 #X obj 255 27 inlet;
-#N canvas 331 144 867 633 router 1;
+#N canvas 331 144 867 633 router 0;
 #X obj 60 39 inlet;
 #X obj 211 195 print [GOPTool]: unkown set parameter;
 #X obj 169 84 print [GOPTool]: unkown selector;
@@ -298,7 +298,7 @@ yMargin;
 0;
 #X obj 222 163 v \$0-h;
 #X obj 171 224 v \$0-w;
-#X obj 312 161 cnv 10 12 17 empty empty x 1 8 0 14 -224132 -262144
+#X obj 312 161 cnv 10 12 17 empty empty x 1 8 0 14 -252418 -262144
 0;
 #X obj 324 161 v \$0-xPos;
 #X floatatom 222 142 5 0 0 0 - - -, f 5;
@@ -307,7 +307,7 @@ yMargin;
 #X msg 273 211 \$7;
 #X msg 324 119 \$8;
 #X floatatom 324 141 5 0 0 0 - - -, f 5;
-#X obj 363 231 cnv 10 12 17 empty empty y 1 8 0 14 -224132 -262144
+#X obj 363 231 cnv 10 12 17 empty empty y 1 8 0 14 -252418 -262144
 0;
 #X floatatom 375 211 5 0 0 0 - - -, f 5;
 #X obj 375 231 v \$0-yPos;
@@ -351,7 +351,7 @@ yMargin;
 0;
 #X obj 97 131 cnv 10 10 12 empty empty ● 1 5 0 15 -262144 -4160 0
 ;
-#X obj 90 142 cnv 10 10 12 empty empty ● 1 5 0 15 -262144 -224132
+#X obj 90 142 cnv 10 10 12 empty empty ● 1 5 0 15 -262144 -252418
 0;
 #X obj 140 448 cnv 10 10 17 empty empty empty 20 12 0 14 -260033 -1
 0;
@@ -417,7 +417,7 @@ yMargin;
 ;
 #X obj 57 25 cnv 10 10 12 empty empty ● 1 5 0 15 -262144 -4160 0
 ;
-#X obj 37 39 cnv 10 10 12 empty empty ● 1 5 0 15 -262144 -224132
+#X obj 37 39 cnv 10 10 12 empty empty ● 1 5 0 15 -262144 -252418
 0;
 #X obj 51 39 cnv 10 10 12 empty empty ● 1 5 0 15 -262144 -201390
 0;
@@ -429,7 +429,7 @@ yMargin;
 0;
 #X obj 237 53 cnv 10 10 12 empty empty ● 1 5 0 15 -262144 -4160 0
 ;
-#X obj 230 64 cnv 10 10 12 empty empty ● 1 5 0 15 -262144 -224132
+#X obj 230 64 cnv 10 10 12 empty empty ● 1 5 0 15 -262144 -252418
 0;
 #X connect 8 0 11 0;
 #X connect 8 0 139 0;

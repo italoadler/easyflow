@@ -115,7 +115,7 @@
 #X obj 24 207 colorSyntax;
 #X obj 24 145 colorNames purple;
 #X restore 41 252 pd color;
-#X obj 191 221 cnv 15 150 20 empty empty Tables 5 9 0 14 -203406 -262144
+#X obj 191 221 cnv 15 150 20 empty empty Tables 5 9 0 14 -252418 -262144
 0;
 #N canvas 17 50 343 535 Lists 0;
 #X obj 28 30 cnv 15 150 20 empty empty Lists 5 9 0 14 -2065 -262144
@@ -168,6 +168,7 @@
 #X obj 36 143 getFolder;
 #X obj 113 116 upperCase;
 #X obj 36 116 lowerCase;
+#X obj 116 142 getFile;
 #X restore 191 97 pd symbols;
 #X obj 398 298 easyflow-info;
 #N canvas 165 50 316 200 tables 0;

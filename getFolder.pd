@@ -19,21 +19,23 @@
 #X obj 135 383 trigger bang bang;
 #X obj 233 622 outlet;
 #X obj 129 142 s \$0-list;
-#X obj 119 142 cnv 10 10 17 empty \empty empty 20 12 0 14 -244615
--1 0;
-#X obj 248 493 cnv 10 10 17 empty \empty empty 20 12 0 14 -244615
--1 0;
+#X obj 119 142 cnv 10 10 17 empty empty empty 20 12 0 14 -244615 -1
+0;
+#X obj 248 493 cnv 10 10 17 empty empty empty 20 12 0 14 -244615 -1
+0;
 #X obj 258 493 r \$0-list;
-#X obj 241 316 cnv 10 10 17 empty \empty empty 20 12 0 14 -244615
--1 0;
+#X obj 241 316 cnv 10 10 17 empty empty empty 20 12 0 14 -244615 -1
+0;
 #X obj 251 316 r \$0-list;
-#X obj 125 210 cnv 10 10 17 empty \empty empty 20 12 0 14 -2112
--1 0;
+#X obj 125 210 cnv 10 10 17 empty empty empty 20 12 0 14 -2112 -1 0
+;
 #X obj 135 210 r \$0-stopFor;
-#X obj 241 406 cnv 10 10 17 empty \empty empty 20 12 0 14 -2112
--1 0;
+#X obj 241 406 cnv 10 10 17 empty empty empty 20 12 0 14 -2112 -1 0
+;
 #X obj 251 406 s \$0-stopFor;
 #X obj 220 684 easyflow/easyflow-info;
+#X obj 316 624 outlet;
+#X obj 336 591 list tosymbol;
 #X connect 0 0 1 0;
 #X connect 1 0 4 0;
 #X connect 2 0 3 0;
@@ -54,9 +56,11 @@
 #X connect 14 0 13 0;
 #X connect 14 1 15 1;
 #X connect 15 0 16 0;
+#X connect 15 1 31 0;
 #X connect 16 0 18 0;
 #X connect 17 0 12 0;
 #X connect 17 1 28 0;
 #X connect 22 0 13 1;
 #X connect 24 0 8 1;
 #X connect 26 0 6 1;
+#X connect 31 0 30 0;

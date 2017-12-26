@@ -1,32 +1,32 @@
 #N canvas 575 78 791 702 10;
 #N canvas 0 50 450 250 (subpatch) 0;
-#X array \$0-left 1.4509e+006 float 0;
-#X coords 0 1 1.4509e+006 -1 100 70 1 0 0;
+#X array \$0-left 223892 float 0;
+#X coords 0 1 223891 -1 100 70 1 0 0;
 #X restore 511 73 graph;
 #X obj 91 12 inlet;
 #X obj 91 159 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #N canvas 0 50 450 250 (subpatch) 0;
-#X array \$0-right 1.4509e+006 float 0;
-#X coords 0 1 1.4509e+006 -1 100 70 1 0 0;
+#X array \$0-right 223892 float 0;
+#X coords 0 1 223891 -1 100 70 1 0 0;
 #X restore 623 74 graph;
 #X obj 513 179 bng 15 250 50 0 \$0-loadLast empty empty 17 7 0 10 -262144
 -1 -1;
 #X text 532 179 load last;
-#N canvas 0 50 450 588 openFile 0;
+#N canvas 0 50 483 739 openFile 0;
 #X obj 47 44 openpanel;
 #X obj 47 66 trigger symbol symbol;
 #X obj 191 92 t s b;
 #X msg 191 174 add2 \$1;
-#X obj 47 396 soundfiler;
-#X obj 47 352 list trim;
-#X msg 47 308 read -resize \$1;
-#X floatatom 47 483 10 0 0 0 - - -, f 10;
+#X obj 44 436 soundfiler;
+#X obj 44 392 list trim;
+#X msg 44 348 read -resize \$1;
+#X floatatom 44 523 10 0 0 0 - - -, f 10;
 #X msg 223 114 set symbol;
-#X obj 47 330 list append \$0-left \$0-right;
+#X obj 44 370 list append \$0-left \$0-right;
 #N canvas 264 50 602 300 lastSample 0;
 #X obj 45 42 inlet;
-#X msg 112 174 symbol C:/Vst/Samples/Glitch?Machines/GM_CYBERNETICS/GM_CYBERNETICS/CYBERNETICS_SAMPLES/GoldenXivaqus.wav
+#X msg 112 174 symbol C:/Vst/Samples/musicradar-spiritual-samples/musicradar-spiritual-samples/Chords/Fake_Choir/Fake_Choir_D#.wav
 ;
 #X obj 112 246 outlet;
 #X obj 112 114 trigger anything anything;
@@ -42,10 +42,10 @@
 #X connect 6 1 3 0;
 #X restore 191 217 pd lastSample;
 #X obj 47 13 inlet;
-#X obj 36 576 cnv 10 10 17 empty empty empty 20 12 0 14 -82680 -1 0
+#X obj 33 616 cnv 10 10 17 empty empty empty 20 12 0 14 -82680 -1 0
 ;
-#X obj 47 576 s \$0-outlet;
-#X msg 47 542 size \$1;
+#X obj 44 616 s \$0-outlet;
+#X msg 44 582 size \$1;
 #N canvas 644 176 488 272 sub 0;
 #X obj 27 22 inlet;
 #X obj 27 44 list fromsymbol;
@@ -81,8 +81,8 @@ file paths \, so it wont be mistaken for anything that was there);
 #X obj 119 15 cnv 10 10 17 empty empty empty 20 12 0 14 -36275 -1 0
 ;
 #X obj 130 15 r \$0-openPanel;
-#X obj 47 512 trigger float float;
-#X obj 114 459 print [sample~];
+#X obj 44 552 trigger float float;
+#X obj 101 499 print [sample~];
 #N canvas 0 50 450 300 updateSliders 0;
 #X obj 40 36 inlet;
 #X msg 40 58 range 0 \$1;
@@ -95,14 +95,18 @@ file paths \, so it wont be mistaken for anything that was there);
 #X connect 1 0 3 0;
 #X connect 1 0 4 0;
 #X connect 1 0 5 0;
-#X restore 177 540 pd updateSliders;
-#X obj 143 435 cnv 10 10 17 empty empty empty 20 12 0 14 -248036 -1
+#X restore 155 580 pd updateSliders;
+#X obj 130 475 cnv 10 10 17 empty empty empty 20 12 0 14 -248036 -1
 0;
-#X obj 154 435 s \$0-sampleRate;
+#X obj 141 475 s \$0-sampleRate;
 #X obj 69 169 r \$0-loadLast;
-#X msg 154 411 \$1;
+#X msg 141 451 \$1;
+#X obj 47 275 getFolder;
+#X obj 98 301 s \$0-sampleName;
+#X obj 69 300 cnv 11 28 17 empty empty gui 2 9 0 14 -1 -262144 0;
+#X obj 47 251 t s s;
 #X connect 0 0 1 0;
-#X connect 1 0 6 0;
+#X connect 1 0 29 0;
 #X connect 1 1 2 0;
 #X connect 2 0 16 0;
 #X connect 2 1 8 0;
@@ -118,13 +122,16 @@ file paths \, so it wont be mistaken for anything that was there);
 #X connect 10 0 15 0;
 #X connect 11 0 0 0;
 #X connect 14 0 13 0;
-#X connect 15 0 6 0;
+#X connect 15 0 29 0;
 #X connect 16 0 3 0;
 #X connect 18 0 0 0;
 #X connect 19 0 14 0;
 #X connect 19 1 21 0;
 #X connect 24 0 10 0;
 #X connect 25 0 23 0;
+#X connect 26 1 27 0;
+#X connect 29 0 26 0;
+#X connect 29 1 6 0;
 #X restore 139 127 pd openFile;
 #X obj 362 391 outlet;
 #X obj 350 391 cnv 11 12 17 empty \$0-canvas 3 2 9 0 14 -1 -262144
@@ -162,7 +169,7 @@ file paths \, so it wont be mistaken for anything that was there);
 #X restore 187 97 pd toggleTabRead;
 #N canvas 20 50 505 484 tabRead 0;
 #X obj 269 101 switch~;
-#X obj 269 65 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 269 65 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 37 289 tabread~ \$0-left;
 #X obj 162 289 tabread~ \$0-right;
@@ -214,7 +221,6 @@ file paths \, so it wont be mistaken for anything that was there);
 #X connect 2 0 3 0;
 #X connect 4 0 2 0;
 #X restore 62 180 pd sub ? whitespace;
-#X obj 62 149 getFolder;
 #X obj 51 221 cnv 10 10 17 empty empty empty 20 12 0 14 -36275 -1 0
 ;
 #X obj 62 221 s \$0-openPanel;
@@ -223,16 +229,17 @@ file paths \, so it wont be mistaken for anything that was there);
 #X obj 62 94 r \$0-lastFolder;
 #N canvas 419 126 602 300 lastSample 0;
 #X obj 45 42 inlet;
-#X msg 45 124 symbol C:/Vst/Samples/Glitch?Machines/GM_CYBERNETICS/GM_CYBERNETICS/CYBERNETICS_SAMPLES/GoldenXivaqus.wav
+#X msg 45 124 symbol C:/Vst/Samples/musicradar-spiritual-samples/musicradar-spiritual-samples/Chords/Fake_Choir/Fake_Choir_D#.wav
 ;
 #X obj 45 196 outlet;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X restore 62 123 pd lastSample;
-#X connect 0 0 3 0;
-#X connect 1 0 0 0;
+#X obj 62 149 getFolder;
+#X connect 0 0 2 0;
+#X connect 4 0 5 0;
 #X connect 5 0 6 0;
-#X connect 6 0 1 0;
+#X connect 6 0 0 0;
 #X restore 87 453 pd lastFolderLogic;
 #X obj 64 455 cnv 10 10 17 empty empty ● 1 5 0 15 -262144 -131136
 0;
@@ -248,7 +255,7 @@ file paths \, so it wont be mistaken for anything that was there);
 0;
 #X obj 661 645 easyflow-info;
 #X obj 513 201 tgl 15 0 \$0-setTabReadFromGUI \$0-tabReadGUI empty
-17 7 0 10 -262144 -1 -1 1 1;
+17 7 0 10 -262144 -1 -1 0 1;
 #X obj 509 265 cnv 10 10 17 empty empty empty 20 12 0 14 -257348 -1
 0;
 #X obj 520 265 r \$0-toggleTabRead;
@@ -260,14 +267,14 @@ file paths \, so it wont be mistaken for anything that was there);
 #X obj 506 404 cnv 10 10 17 empty empty empty 20 12 0 14 -257348 -1
 0;
 #X obj 517 404 s \$0-toggleTabRead;
-#X obj 514 147 hsl 95 8 0 1.4509e+006 0 0 empty \$0-leftSlider empty
--2 -8 0 10 -262144 -1 -1 9400 1;
-#X obj 625 147 hsl 95 8 0 1.4509e+006 0 0 empty \$0-rightSlider empty
--2 -8 0 10 -262144 -1 -1 9400 1;
-#X obj 514 159 hsl 95 8 0 1.4509e+006 0 0 empty \$0-leftSliderRead
-empty -2 -8 0 10 -262144 -258113 -1 6967 1;
-#X obj 625 159 hsl 95 8 0 1.4509e+006 0 0 empty \$0-rightSliderRead
-empty -2 -8 0 10 -262144 -258113 -1 6967 1;
+#X obj 514 147 hsl 95 8 0 223892 0 0 empty \$0-leftSlider empty -2
+-8 0 10 -262144 -1 -1 0 1;
+#X obj 625 147 hsl 95 8 0 223892 0 0 empty \$0-rightSlider empty -2
+-8 0 10 -262144 -1 -1 0 1;
+#X obj 514 159 hsl 95 8 0 223892 0 0 empty \$0-leftSliderRead empty
+-2 -8 0 10 -262144 -258113 -1 0 1;
+#X obj 625 159 hsl 95 8 0 223892 0 0 empty \$0-rightSliderRead empty
+-2 -8 0 10 -262144 -258113 -1 0 1;
 #N canvas 655 87 590 587 tabplaySliders 0;
 #X floatatom 59 163 15 0 0 0 - - -, f 15;
 #X obj 59 141 expr size("$s1");
@@ -504,6 +511,7 @@ empty -2 -8 0 10 -262144 -258113 -1 6967 1;
 #X obj 383 596 s \$0-outlet;
 #X obj 383 544 list prepend sampleRate;
 #X obj 383 565 list trim;
+#X symbolatom 614 38 18 0 0 0 - #0-sampleName -, f 18;
 #X connect 1 0 45 0;
 #X connect 2 0 51 0;
 #X connect 2 0 50 0;

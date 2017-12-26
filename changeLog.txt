@@ -1,0 +1,57 @@
+# easyflow version 0.2.0
+
+## improvements
+
+* *[mixAB~]* - bugfix: now amplitude starts at 1. (Sending |1( to the [vline~] objects on [loadbang])
+* *[getFolder]* - new outlet: outputs file name
+* *[sample~]* - now displays sample name
+
+## new abstractions
+
+* *[getFile]* - just like [getFolder] but outputs the file on the left outlet and the folder on the right
+
+# easyflow version 0.1.0
+
+## New abstractions
+
+### Lists
+
+[addList][copyList][left2right][l2r][right2left][r2l][funnel][passNthElement][passPair][listPlus][listCompare][listConcatenate][listPick][listPickPair][listReplace][listReplaceAtIndex][listSplit][popLastN][searchElem]
+
+
+### Symbols 
+
+[symbolize][numberSymbol][lowerCase][upperCase][getFolder][symbolSplit]
+
+### Signals
+
+[audioSpigot][switch2~][mixAB~][sample~]
+
+### Utilities
+
+[counter][for][keyChange][hold][metrosnap~][mixAB]
+
+### Flow Control
+
+[alternate][compare][switch2]...[switch7]
+
+### Math
+
+[nearest][numbersbetween][map][keepMax][keepMin][hexCharToDec]
+
+### Color
+
+[colorNames][redGreenBlue][rgb][hueSaturationBrightness][hsb][hueSaturationLuminosity][easyflow/hsl][hexColor][colorSyntax]
+### Tables
+
+[tabCopy][tabReverse][tabReverseCopy]
+
+### Coding
+
+#### Color highlighting
+
+[colorHighlighting][colorDef][colorCirc][colorCnv][colorTri][labelCnv][colorCircF][colorCnvF][colorTriF][labelCnvF]
+
+#### Debugging and utilities
+
+[GOPTool][printHere]

@@ -23,7 +23,7 @@ Here are some highlights. Some are simple yet very useful because PD lacks some 
 - **[map]** = Converts a numeric stream from one range to another. "One-line" linear interpolation!
 - **[printHere]** - a portable console-like abstraction that you can use directly on your patch. No more switching windows!
 - **[GOPTool]** = controls the Graph-on-parent values directly from pd. No more editing vlaues then clicking apply!
-- **[listToSymbol]** - converts a list to a symbol, adding the special char " " between words. Great to add more than one word to labels.
+- **[listToSymbol]** - converts a list to a symbol, adding the special char " " between words. Great to add more than one word to labels.
 - **[HSB][HSL][RGB][colorNames][hexColor][colorSyntax]** = Easily generate colors to edit Pure Data vanilla GUI objects.
 - **[colorHighlighting]+related** - color highlighting for better code. See the [easyflow wiki](https://github.com/HenriAugusto/easyflow/wiki) for more information
 
@@ -82,7 +82,8 @@ This way you can avoid naming conflicts. Easyflow have an abstraction called [co
 - *[symbolize]* - Just a shortcut to add a symbol selector to messages
 - *[numberSymbol]* - allows you to have symbols that contain only numeric chars
 - *[lowerCase][upperCase]* - converts a symbol to lowerCase/upperCase
-- *[getFolder]* - get the folder from a symbol containing a file path
+- *[getFolder]* - get the folder from a symbol containing a file path (and additionally outputs the file name)
+- *[getFile]* - get the file name from a symbol containing a file path (and additionally outputs the folder path)
 - *[symbolSplit]* - splits a symbol in a specified char
 
 
